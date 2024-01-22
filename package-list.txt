@@ -1,0 +1,10 @@
+git
+htop
+python
+neofetch
+nmap
+tree
+ufw
+vim
+wget
+wireguard
