@@ -56,7 +56,7 @@ As normal user, run `iwctl`.
 
 Install all packages from the [package list](package-list.txt) with `apt install [packages]`.
 
-## Routing & Wireguard
+## Routing & Wireguard (server)
 
 ```sh
 sudo nano /etc/sysctl.conf # net.ipv4.ip_forward=1
