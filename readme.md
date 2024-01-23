@@ -58,6 +58,8 @@ Install all packages from the [package list](package-list.txt) with `apt install
 
 ## Routing & Wireguard (server)
 
+[cf. `/etc/wireguard/wg.conf`](etc/wireguard/wg.conf)
+
 ```sh
 sudo nano /etc/sysctl.conf # net.ipv4.ip_forward=1
                            # net.ipv6.conf.all.forwarding=1
