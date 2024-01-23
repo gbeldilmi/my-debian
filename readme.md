@@ -64,7 +64,7 @@ sudo nano /etc/sysctl.conf # net.ipv4.ip_forward=1
 sudo sysctl -p
 
 wg genkey | sudo tee /etc/wireguard/wg-private.key | wg pubkey | sudo tee /etc/wireguard/wg-public.key
-
+sudo vim /etc/wireguard/wg.conf
 sudo systemctl start wg-quick@wg.service
 sudo systemctl enable wg-quick@wg.service
 
