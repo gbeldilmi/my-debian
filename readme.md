@@ -61,8 +61,7 @@ Install all packages from the [package list](package-list.txt) with `apt install
 ```sh
 apt install isc-dhcp-server net-tools iptables iptables-persistent
 
-vim /etc/sysctl.conf # net.ipv4.ip_forward=1
-                     # net.ipv6.conf.all.forwarding=1
+vim /etc/sysctl.conf
 sysctl -p
 
 iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE 
@@ -77,18 +76,19 @@ echo "# Redirect dhcp service" >> /etc/syslog.conf
 echo "local7.* /var/log/dhcp/dhcpd.log" >> /etc/syslog.conf
 ```
 
-- [cf. `/etc/network/interfaces`](resources/etc/network/interfaces)
-- [cf. `/etc/default/isc-dhcp-server`](resources/etc/default/isc-dhcp-server)
-- [cf. `/etc/dhcp/dhcpd.conf`](resources/etc/dhcp/dhcpd.conf)
+- [cf. `/etc/sysctl.conf`](etc/sysctl.conf)
+- [cf. `/etc/network/interfaces`](etc/network/interfaces)
+- [cf. `/etc/default/isc-dhcp-server`](etc/default/isc-dhcp-server)
+- [cf. `/etc/dhcp/dhcpd.conf`](etc/dhcp/dhcpd.conf)
 
 
 ## Wireguard (server)
 
+- [cf. `/etc/sysctl.conf`](etc/sysctl.conf)
 - [cf. `/etc/wireguard/wg0.conf`](etc/wireguard/wg0.conf)
 
 ```sh
-sudo vim /etc/sysctl.conf # net.ipv4.ip_forward=1
-                           # net.ipv6.conf.all.forwarding=1
+sudo vim /etc/sysctl.conf
 sudo sysctl -p
 
 wg genkey | sudo tee /etc/wireguard/wg0-private.key | wg pubkey | sudo tee /etc/wireguard/wg0-public.key
