@@ -56,6 +56,12 @@ As normal user, run `iwctl`.
 
 Install all packages from the [package list](package-list.txt) with `apt install [packages]`.
 
+Show system information when logging in.
+
+```sh
+echo "neofetch" >> /etc/profile
+```
+
 ## Routing 
 
 ```sh
