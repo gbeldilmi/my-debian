@@ -90,7 +90,7 @@ echo "local7.* /var/log/dhcp/dhcpd.log" >> /etc/syslog.conf
 
 ## Wireguard (server)
 
-[cf. my-archlinux configuration](https://github.com/gbeldilmi/my-archlinux)
+[cf. my-arch configuration](https://github.com/gbeldilmi/my-arch)
 
 ```sh
 sudo vim /etc/sysctl.conf
